@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """zhihuhelp URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -20,5 +21,5 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/', include('login.urls')),
-    url(r'^favicon.ico$', RedirectView.as_view(url='/static/images/logo.ico'))
+    url(r'^favicon.ico$', RedirectView.as_view(url='/static/images/logo.ico')) ,# 网站图标
 ]

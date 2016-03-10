@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-#!/usr/bin/env python
 # 放置于首位
 import os
 import sys  # 修改默认编码
+import locale #获取原始编码
 reload(sys)
 sys.setdefaultencoding('utf-8')
 sys.setrecursionlimit(100000)  # 为BS解析知乎上的长答案增加递归深度限制
 
 # 添加包路径
-base_path = unicode(os.path.abspath('.').decode(sys.stdout.encoding))
+base_path = unicode(os.path.abspath('.').decode(locale.getpreferredencoding()))
 sys.path.append(base_path + u'/src/lib')
 
 

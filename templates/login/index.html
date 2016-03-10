@@ -1,5 +1,23 @@
 {% load staticfiles %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/login/test.css' %}" />
-{{test}}
-<img src="{% static 'images/logo.png'%}">
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Rango</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login/test.css' %}" />
+    </head>
+
+    <body>
+
+        {{test}}
+        <img src="{% static 'images/logo.png'%}">
+
+        <h1>Rango says...</h1>
+        hello world! <strong>{{ boldmessage }}</strong><br />
+        <a href="/rango/about/">About</a><br />
+    </body>
+
+</html>

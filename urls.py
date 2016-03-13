@@ -21,5 +21,10 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/', include('login.urls')),
-    url(r'^favicon.ico$', RedirectView.as_view(url='/static/images/logo.ico')) ,# 网站图标
+    url(r'^favicon.ico$', RedirectView.as_view(url='/static/images/logo.ico')),  # 网站图标
 ]
+
+# 用于处理用户上传的文件
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
